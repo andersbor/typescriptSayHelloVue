@@ -1,12 +1,18 @@
-interface Person {
-    firstName: string;
-    lastName: string;
-}
-
-function greeter(person: Person): string {
-    return "Hello, " + person.firstName + " " + person.lastName;
-}
-let user: Person = { firstName: "John", lastName: "Doe" };
-
-let element: HTMLDivElement = <HTMLDivElement> document.getElementById("content");
-element.innerHTML = greeter(user);
+new Vue({
+    el: "#app",
+    data: {
+        name: "",
+        greeting: ""
+    },
+    methods: {
+        sayHello(name: string) {
+            console.log("Say Hello " + name)
+            if (name.length == 0) {
+                this.greeting = "Hello NoName"
+            }
+            else {
+                this.greeting = "Hello " + name
+            }
+        }
+    }
+})
