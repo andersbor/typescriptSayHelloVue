@@ -9,7 +9,7 @@
 
 <body>
   <div id="app">
-    <input v-model="name" placeholder="Name" id="inputField">
+    <input v-model="name" type="text" placeholder="Name" id="inputField">
     <button v-on:click="sayHello(name)" id="button">Say hello</button>
     <div id="outputField">{{ greeting }}</div>
   </div>
